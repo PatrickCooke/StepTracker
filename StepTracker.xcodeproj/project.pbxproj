@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360C9C7A9C14AEFFD5E95C4B /* Pods_StepTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15D32B82332DAD666012193 /* Pods_StepTracker.framework */; };
 		43196CC91CFDF59000F5735C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43196CC81CFDF59000F5735C /* AppDelegate.swift */; };
 		43196CCB1CFDF59000F5735C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43196CCA1CFDF59000F5735C /* ViewController.swift */; };
 		43196CCE1CFDF59000F5735C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43196CCC1CFDF59000F5735C /* Main.storyboard */; };
 		43196CD01CFDF59000F5735C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43196CCF1CFDF59000F5735C /* Assets.xcassets */; };
 		43196CD31CFDF59000F5735C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43196CD11CFDF59000F5735C /* LaunchScreen.storyboard */; };
+		43196CDC1CFDF61800F5735C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43196CDB1CFDF61800F5735C /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		43196CCF1CFDF59000F5735C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43196CD21CFDF59000F5735C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43196CD41CFDF59000F5735C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43196CDA1CFDF61800F5735C /* StepTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StepTracker.entitlements; sourceTree = "<group>"; };
+		43196CDB1CFDF61800F5735C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		7383E68F2A40BBDC3D9A691C /* Pods-StepTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StepTracker/Pods-StepTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C15D32B82332DAD666012193 /* Pods_StepTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC832CB6D39E8E388BC97708 /* Pods-StepTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-StepTracker/Pods-StepTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360C9C7A9C14AEFFD5E95C4B /* Pods_StepTracker.framework in Frameworks */,
+				43196CDC1CFDF61800F5735C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30AEF131D79D28B13C719FFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43196CDB1CFDF61800F5735C /* HealthKit.framework */,
+				C15D32B82332DAD666012193 /* Pods_StepTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43196CBC1CFDF59000F5735C = {
 			isa = PBXGroup;
 			children = (
 				43196CC71CFDF59000F5735C /* StepTracker */,
 				43196CC61CFDF59000F5735C /* Products */,
+				EDAD9B1705B4C56F1A119933 /* Pods */,
+				30AEF131D79D28B13C719FFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,7 @@
 		43196CC71CFDF59000F5735C /* StepTracker */ = {
 			isa = PBXGroup;
 			children = (
+				43196CDA1CFDF61800F5735C /* StepTracker.entitlements */,
 				43196CC81CFDF59000F5735C /* AppDelegate.swift */,
 				43196CCA1CFDF59000F5735C /* ViewController.swift */,
 				43196CCC1CFDF59000F5735C /* Main.storyboard */,
@@ -64,6 +85,15 @@
 			path = StepTracker;
 			sourceTree = "<group>";
 		};
+		EDAD9B1705B4C56F1A119933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7383E68F2A40BBDC3D9A691C /* Pods-StepTracker.debug.xcconfig */,
+				FC832CB6D39E8E388BC97708 /* Pods-StepTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43196CD71CFDF59000F5735C /* Build configuration list for PBXNativeTarget "StepTracker" */;
 			buildPhases = (
+				DEA483A9156D8B7F2DA4C1F4 /* 📦 Check Pods Manifest.lock */,
 				43196CC11CFDF59000F5735C /* Sources */,
 				43196CC21CFDF59000F5735C /* Frameworks */,
 				43196CC31CFDF59000F5735C /* Resources */,
+				76B1011305B6FFC17103AD25 /* 📦 Embed Pods Frameworks */,
+				4FB4884ACB6FAF94E33DEAFA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +130,11 @@
 					43196CC41CFDF59000F5735C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = H56J2Z836K;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,6 +168,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB4884ACB6FAF94E33DEAFA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StepTracker/Pods-StepTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76B1011305B6FFC17103AD25 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StepTracker/Pods-StepTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA483A9156D8B7F2DA4C1F4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43196CC11CFDF59000F5735C /* Sources */ = {
@@ -250,8 +336,10 @@
 		};
 		43196CD81CFDF59000F5735C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7383E68F2A40BBDC3D9A691C /* Pods-StepTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StepTracker/StepTracker.entitlements;
 				INFOPLIST_FILE = StepTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thepatrickcooke.StepTracker;
@@ -261,8 +349,10 @@
 		};
 		43196CD91CFDF59000F5735C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC832CB6D39E8E388BC97708 /* Pods-StepTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StepTracker/StepTracker.entitlements;
 				INFOPLIST_FILE = StepTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thepatrickcooke.StepTracker;
@@ -289,6 +379,7 @@
 				43196CD91CFDF59000F5735C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
